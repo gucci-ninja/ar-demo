@@ -40,10 +40,18 @@
             <a-entity
                 gltf-model='assets/scene.gltf'
                 scale="5 5 5"
-                position="150 300 -100"
+                position="0 0 0"
                 >
             </a-entity>
         </a-nft>
+        <a-entity
+        geometry="primitive: plane; height: auto; width: auto"
+        material="color: blue"
+        scale="0.8 0.8 0.8"
+        position="0 0 0"
+        look-at="[camera]"
+        id="some-text"
+        text="width: 4; value: This text will be 4 units wide."></a-entity>
 		<a-entity camera></a-entity>
     </a-scene>
 </body>
