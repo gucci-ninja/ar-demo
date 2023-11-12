@@ -42,6 +42,11 @@
         renderer="logarithmicDepthBuffer: true; precision: medium;"
         embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: true;'>
 
+        <a-assets>
+          <video src="assets/video2.mp4"
+            reload="auto" id="vid" response-type="arraybuffer" loop
+            crossorigin webkit-playsinline autoplay muted playsinline></video>
+        </a-assets>
         <a-nft
             type='nft' url='https://gucci-ninja.github.io/ar-demo/assets/nft/mydrink'
             smooth='true' smoothCount='10' smoothTolerance='0.01' smoothThreshold='5'>
@@ -51,15 +56,14 @@
                 position="0 0 0"
                 >
             </a-entity>
+            <a-video
+              src="#vid"
+              position='50 150 -100'
+              rotation='90 0 90'
+              width='690'
+              height='480'
+              ></a-video>
         </a-nft>
-        <a-entity
-        geometry="primitive: plane; height: 160px; width: 120px"
-        material="color: blue"
-        scale="5 5 5"
-        position="0 0 0"
-        look-at="[camera]"
-        id="some-text"
-        text="width: 4; value: This text will be 4 units wide."></a-entity>
 		<a-entity camera></a-entity>
     </a-scene>
 </body>
